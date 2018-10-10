@@ -5,41 +5,46 @@
 
 int main(){
     struct node * head = malloc(sizeof(struct node));
-    struct node * a0 = malloc(sizeof(struct node));
-    struct node * a1 = malloc(sizeof(struct node));
-    struct node * a2 = malloc(sizeof(struct node));
-    struct node * a3 = malloc(sizeof(struct node));
-    struct node * a4 = malloc(sizeof(struct node));
+    //struct node * a0 = malloc(sizeof(struct node));
+    //struct node * a1 = malloc(sizeof(struct node));
+    //struct node * a2 = malloc(sizeof(struct node));
+    //struct node * a3 = malloc(sizeof(struct node));
+    //struct node * a4 = malloc(sizeof(struct node));
     //printf("%ld\n", sizeof(struct node));
 
     printf("\nprint_list\n\n");
     head->num = 1;
-    head->next = a0;
+    head->next = 0;
 
-    a0->num = 2;
-    a0->next = a1;
+    print_list(head);
 
-    a1->num = 4;
-    a1->next = a2;
+    //a0->num = 2;
+    //a0->next = a1;
 
-    a2->num = 8;
-    a2->next = a3;
+    //a1->num = 4;
+    //a1->next = a2;
 
-    a3->num = 16;
-    a3->next = a4;
+    //a2->num = 8;
+    //a2->next = a3;
 
-    a4->num = 32;
-    a4->next = NULL;
+    //a3->num = 16;
+    //a3->next = a4;
+
+    //a4->num = 32;
+    //a4->next = NULL;
 
     //print_list(head);
 
     printf("insert_front\n");
-    head = insert_front(head, 666);
+    int i = 10;
+    for (i; i >= 0; i--){
+        head = insert_front(head, i);
+    }
     print_list(head);
 
-    printf("free\n");
-    free_list(head);
-    print_list(head);
+    //printf("free\n");
+    //free_list(head);
+    //print_list(head);
 
     //free(head);
     //free(a0);

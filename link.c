@@ -21,11 +21,12 @@ struct node * insert_front(struct node * front, int new_num){
 
 struct node * free_list(struct node * front){
     struct node * temp = front;
+    struct node * ret = front;
     while(temp){
         temp = temp->next;
         free(front);
         front = temp;
     }
 
-    return front;
+    return ret;
 }
